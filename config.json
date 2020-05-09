@@ -1,0 +1,7 @@
+{
+    "masterFile": "./static/master_data.csv",
+    "employeeFile": "./static/sample_task.csv",
+    "holidayFile": "./static/holidays.csv",
+    "logPath": "/Users/alishan/reportingApp/log/",
+    "backupMasterFile": "/Users/alishan/reportingApp/backup/"
+}

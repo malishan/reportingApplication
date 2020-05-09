@@ -1,0 +1,122 @@
+/* USER SIGNIN VALIDATION*/
+
+curl -X POST \
+  http://localhost:4040/reportingApp/signin \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 50' \
+  -H 'Content-Type: application/json' \
+  -H 'Host: localhost:4040' \
+  -H 'Postman-Token: f4964f5c-ef22-4075-9f56-fa79638a26f1,87511353-1f45-43ff-b341-c5a6b826992f' \
+  -H 'User-Agent: PostmanRuntime/7.19.0' \
+  -H 'cache-control: no-cache' \
+  -d '{
+	"username": "",
+	"email": "",
+	"password": ""
+}'
+
+
+
+
+
+
+
+
+/* HEALTH CHECK INFO API */
+
+curl -X GET \
+  http://localhost:4040/reportingApp/health \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Cookie: reportingApp-access-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiQWxpc2hhbiIsImV4cCI6MTU3NDYyNDU1MSwiaWF0IjoxNTc0NjI0NDkxfQ.aw9QJ9flqmEj7sw3WVA0CDn_SQ9TdyC9mPaJx-NEU64' \
+  -H 'Host: localhost:4040' \
+  -H 'Postman-Token: cab1d045-5f43-4578-95a6-f2b8ccf27a62,c3cd7d48-962c-41ac-ae7a-6a5c534890c8' \
+  -H 'User-Agent: PostmanRuntime/7.19.0' \
+  -H 'cache-control: no-cache'
+
+
+
+
+
+
+
+/* EMPLOYEE REPORT INFO API */
+
+curl -X POST \
+  http://localhost:4040/reportingApp/employeeReport \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 104' \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  -H 'Cookie: reportingApp-access-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiQWxpc2hhbiIsImV4cCI6MTU3NDYyNDU1MSwiaWF0IjoxNTc0NjI0NDkxfQ.aw9QJ9flqmEj7sw3WVA0CDn_SQ9TdyC9mPaJx-NEU64' \
+  -H 'Host: localhost:4040' \
+  -H 'Postman-Token: 1aefa153-e615-4cd9-86b8-99a44a7ca439,f505c8aa-5338-4914-8150-91408f369cb6' \
+  -H 'User-Agent: PostmanRuntime/7.19.0' \
+  -H 'cache-control: no-cache' \
+  -H 'reportingApp-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiQWxpc2hhbiIsIkVtYWlsIjoiIiwiZXhwIjoxNTc5ODk2NTYwfQ.MzeSA0QjHyXpHIZG7tWAxJDyjZTWcH0_m1Tenu22ubQ'
+
+
+
+
+
+
+
+
+/* CUMULATIVE ANNUAL REPORT */
+
+curl -X POST \
+  http://localhost:4040/reportingApp/cumulativeReport \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 35' \
+  -H 'Content-Type: application/json' \
+  -H 'Cookie: reportingApp-access-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiQWxpc2hhbiIsImV4cCI6MTU3NDYyNjQ0NSwiaWF0IjoxNTc0NjI0NjQ1fQ.YaitHn6jGlzLBKTLcaSsYpjRGw-3ZQcAmgRXppTVu5A' \
+  -H 'Host: localhost:4040' \
+  -H 'Postman-Token: a84731bc-9cf1-4178-815c-da5067d4193d,96b30816-7733-44c4-9759-adaac142392e' \
+  -H 'User-Agent: PostmanRuntime/7.19.0' \
+  -H 'cache-control: no-cache' \
+  -H 'reportingApp-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiQWxpc2hhbiIsIkVtYWlsIjoiIiwiZXhwIjoxNTc5ODk2NTYwfQ.MzeSA0QjHyXpHIZG7tWAxJDyjZTWcH0_m1Tenu22ubQ' \
+  -d '{
+	"unit": "all",
+	"year": "2019"
+}'
+
+
+
+
+
+
+
+
+
+/* DETAILED REPORT OF SINGLE EMPLOYEE OR ANY SPECIFIC HIERARCHY*/
+
+curl -X POST \
+  http://localhost:4040/reportingApp/detailedReport \
+  -H 'Accept: */*' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 109' \
+  -H 'Content-Type: application/json' \
+  -H 'Cookie: reportingApp-access-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiQWxpc2hhbiIsImV4cCI6MTU3NDYyNjQ0NSwiaWF0IjoxNTc0NjI0NjQ1fQ.YaitHn6jGlzLBKTLcaSsYpjRGw-3ZQcAmgRXppTVu5A' \
+  -H 'Host: localhost:4040' \
+  -H 'Postman-Token: d757c693-b42e-45c2-b73a-cb34a010c345,0c388282-c33d-47d8-8746-5015f3d45941' \
+  -H 'User-Agent: PostmanRuntime/7.19.0' \
+  -H 'cache-control: no-cache' \
+  -H 'reportingApp-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiQWxpc2hhbiIsIkVtYWlsIjoiIiwiZXhwIjoxNTc5ODk2NTYwfQ.MzeSA0QjHyXpHIZG7tWAxJDyjZTWcH0_m1Tenu22ubQ' \
+  -d '{
+    "employeeID": "14041",
+    "type": "division",
+    "startDate": "7/1/2019",
+    "endDate": "9/1/2019"
+}'
