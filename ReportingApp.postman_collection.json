@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "820e73a3-e966-4184-b91a-20ea1e942db2",
+		"name": "ReportingApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4040/reportingApp/workInfo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "reportingApp-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiQWxpc2hhbiIsIkVtYWlsIjoiIiwiZXhwIjoxNTc5ODk2NTYwfQ.MzeSA0QjHyXpHIZG7tWAxJDyjZTWcH0_m1Tenu22ubQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeID\": \"12063\",\n    \"type\": \"all\",\n    \"startDate\": \"7/1/2019\",\n    \"endDate\": \"7/2/2019\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4040/reportingApp/employeeReport",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"reportingApp",
+						"employeeReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4040/reportingApp/cumulativeReport",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "reportingApp-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiQWxpc2hhbiIsIkVtYWlsIjoiIiwiZXhwIjoxNTc5ODk2NTYwfQ.MzeSA0QjHyXpHIZG7tWAxJDyjZTWcH0_m1Tenu22ubQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"unit\": \"all\",\n\t\"year\": \"2019\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4040/reportingApp/cumulativeReport",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"reportingApp",
+						"cumulativeReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4040/reportingApp/detailedReport",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "reportingApp-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJOYW1lIjoiQWxpc2hhbiIsIkVtYWlsIjoiIiwiZXhwIjoxNTc5ODk2NTYwfQ.MzeSA0QjHyXpHIZG7tWAxJDyjZTWcH0_m1Tenu22ubQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeID\": \"14041\",\n    \"type\": \"division\",\n    \"startDate\": \"7/1/2019\",\n    \"endDate\": \"9/1/2019\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4040/reportingApp/detailedReport",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"reportingApp",
+						"detailedReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4040/reportingApp/signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"Alishan\",\n\t\"email\": \"ahmedalishan@gmail.com\",\n\t\"password\": \"54321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4040/reportingApp/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"reportingApp",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4040/reportingApp/health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4040/reportingApp/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4040",
+					"path": [
+						"reportingApp",
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
